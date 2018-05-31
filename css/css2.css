@@ -1,0 +1,61 @@
+@charset "utf-8";
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+li{
+    list-style:none;
+}
+image{
+    vertical-align: top;
+    border:none;
+}
+i,em{
+    font-style: normal;
+}
+b,strong{
+    font-weight:normal;
+}
+body{
+    font:16px/26px "Microsoft Yahei";
+    width:1000px;
+    margin:0 auto;
+}
+.top{
+    color:white;
+    background-color: rgb(114, 175, 245);
+    width: 180px;
+    height:780px;
+    float:left;
+}
+.con{
+    float:left;
+    margin-left:20px;
+}
+.top>div{
+    margin:50px auto ;
+    width:80px;
+}
+.total{
+    margin-top:30px;
+    
+}
+.tit{
+    font-size:22px;
+    font-weight: bold;
+}
+.con div{
+    margin-top:20px;
+}
+.b{
+    display:block;
+    font-weight: bold;
+}
+.kg{
+    margin-right:50px;
+}
+
