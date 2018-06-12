@@ -1,0 +1,131 @@
+@charset "utf-8";
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,pre{
+    margin:0;
+    padding:0;
+}
+a{
+    color:inherit;
+}
+li{
+    list-style:none;
+}
+i,em{
+    font-style: normal;
+}
+b,strong{
+    font-weight:normal;
+}
+img{
+    vertical-align:top;
+    border:none;
+}
+.total{
+    height:100%;
+}
+.top{
+    width:100%;
+    background-color:rgb(61, 61, 61);
+    height: 50px;
+}
+body{
+    font:12px/24px "Micorosoft yahei";
+}
+.c{
+    width:960px;
+    margin:0 auto;
+    overflow:hidden;
+}
+.logo{
+    float:left;
+    color:white;
+    padding-top:10px;
+    font-size:18px;
+}
+.link{
+    float:right;
+    color:white;
+    word-spacing: 5px;
+}
+.banner{
+    background-color:rgb(115, 207, 62);
+    height: 250px;
+}
+.k{
+    float:right;
+    margin-right:20%;
+    margin-top:240px;
+    color:rgb(92, 91, 91);
+    position:relative;
+}
+.sban{
+    background-color:rgb(171, 219, 144);
+    padding:0 6px;
+    border:1px solid rgba(114, 113, 113, 0.808);
+    position:absolute;
+    bottom:0;
+}
+.s{
+    left:25px;
+}
+.t{
+    left:50px;
+}
+.f{
+    left:75px;
+}
+.choose{
+    background-color: rgb(234, 247, 223);
+    padding:8px 6px 0 6px;
+}
+.na{
+    border-bottom:1px solid rgb(206, 204, 204);
+    margin-top:10px;
+    overflow:hidden;
+}
+ul{
+    width:960px;
+    margin:0 auto;
+    
+}
+li{
+    float:left;
+    padding:5px 15px;
+    border:1px solid rgb(206, 204, 204);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color:rgba(226, 224, 224, 0.486);
+}
+.na li:hover{
+    background-color:white;
+    border-bottom: white;
+}
+.content{
+    width: 960px;
+    margin:0 auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+.com{
+    box-sizing:border-box;
+    border:1px solid rgb(206, 204, 204);
+    margin-top:10px;
+    margin-right:1%;
+}
+.fir{
+    padding:125px;
+}
+.sec{
+    padding:85px;
+}
+.thi{
+    padding:124px;
+}
+.bottom{
+    background-color:grey;
+    height:100px;
+    margin-top:1%;
+    text-align:center;
+}
+
+
