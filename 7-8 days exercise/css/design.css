@@ -79,16 +79,18 @@ body{
 }
 .na{
     border-bottom:1px solid rgb(206, 204, 204);
-    margin-top:10px;
-    overflow:hidden;
 }
 ul{
     width:960px;
     margin:0 auto;
-    
+    margin:10px auto -1px;
+    overflow: hidden;
+    /* font-size:0; */
 }
 li{
     float:left;
+    /* font-size:12px;
+    display: inline-block; */
     padding:5px 15px;
     border:1px solid rgb(206, 204, 204);
     border-top-left-radius: 10px;
@@ -97,7 +99,7 @@ li{
 }
 .na li:hover{
     background-color:white;
-    border-bottom: white;
+    border-bottom-color:white;
 }
 .content{
     width: 960px;
