@@ -296,15 +296,17 @@ body{
     color:rgba(255, 255, 255, 0.459);
 }
 .shadowimg{
-    padding-left:20px;
+    /* padding-left:30px; */
+    margin-right: 25px;
     float:left;
-    width:50px;
+    width:52px;
     height:55px;
     background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 .chat{
     overflow: hidden;
-    margin:30px 0 0 50px;
+    margin:30px 0 0 40px;
 }
 .imga{
     background-image:url("../images/img5/img1.png");
@@ -317,7 +319,7 @@ body{
 }
 .seven{
     background-color:white;
-    height:700px;
+    height:600px;
     border-top: 1px solid rgba(128, 128, 128, 0.178);   
 }
 .sevenmargin{
@@ -328,15 +330,15 @@ body{
 }
 .feedback{  
     float:left;
-    width:50%;
+    width:45%;
     height:95%;
     border:1px solid rgba(128, 128, 128, 0.178);
     border-radius: 10px;
 }
 .feedmargin{
-    width:80%;
+    width:75%;
     height:80%;
-    margin:10% 8%;
+    margin:10% 10%;
 }
 .stitle{
     font-size:20px;
@@ -345,7 +347,7 @@ body{
     text-align: center;
 }
 .sbor{
-    padding:4% 0 4% 5%;
+    padding:2% 0 2% 4%;
     width:100%;
     border:1px solid rgba(128, 128, 128, 0.178);
     margin-top: 8%;
@@ -356,7 +358,7 @@ body{
 }
 .send{
     text-align: center;
-    background-color:black;
+    background-color:rgba(0, 0, 0, 0.925);
     color:rgba(255, 255, 255, 0.795);
 }
 .sevenright{
@@ -365,7 +367,7 @@ body{
     width:30%;
 }
 .sevenright dt{
-    margin-top:30%;
+    margin-top:15%;
     font-size: 40px;
 }
 .dd1{
@@ -373,7 +375,7 @@ body{
     color:rgba(71, 71, 71, 0.692);
 }
 .dd2{
-    margin-top:20%;
+    margin-top:15%;
 }
 .sevenicon{
     width: 30px;
@@ -392,5 +394,34 @@ body{
 }
 .dd3{
     margin-top:30px;
+}
+.eight{
+    height:400px;
+    background-color:rgba(0, 0, 0, 0.925);
+    border-top:1px solid black;
+}
+.eightmargin{
+    width:75%;
+    height:60%;
+    margin:5% auto;
+    display: flex;
+}
+.econt{
+    width:25%;
+    letter-spacing: 1px;
+}
+.econt dt{
+    color:rgba(255, 255, 255, 0.795);
+    font-weight:bold;
+}
+.econt dd{
+    margin-top:8%;
+    color:rgba(145, 144, 144, 0.76);
+}
+.eighticon{
+    height:20px;
+    width:80%;
+    background-image:url("../images/img6/img1.png");
+    background-repeat: no-repeat;
 }
 
