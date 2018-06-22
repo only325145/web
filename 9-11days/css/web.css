@@ -330,15 +330,15 @@ body{
 }
 .feedback{  
     float:left;
-    width:45%;
+    width:40%;
     height:95%;
     border:1px solid rgba(128, 128, 128, 0.178);
     border-radius: 10px;
 }
 .feedmargin{
     width:75%;
-    height:80%;
-    margin:10% 10%;
+    height:85%;
+    margin:10% auto;
 }
 .stitle{
     font-size:20px;
@@ -347,8 +347,8 @@ body{
     text-align: center;
 }
 .sbor{
-    padding:2% 0 2% 4%;
-    width:100%;
+    padding:3% 0 2% 4%;
+    width:95%;
     border:1px solid rgba(128, 128, 128, 0.178);
     margin-top: 8%;
     color:rgba(71, 71, 71, 0.692);
@@ -360,6 +360,7 @@ body{
     text-align: center;
     background-color:rgba(0, 0, 0, 0.925);
     color:rgba(255, 255, 255, 0.795);
+    width:100%;
 }
 .sevenright{
     margin-right:5%;
