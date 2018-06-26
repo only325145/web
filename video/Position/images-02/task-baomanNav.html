@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8" />
+		<title>hello world!</title>
+		<meta name="Keywords" content="201710级基础班,01-模板" />
+		<meta name="Description" content="" />
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			a{text-decoration:none;color:inherit;}
+			li{list-style:none;display:block;}
+			img{vertical-align:top;}
+			.clearFix::after{
+				content:"";
+				display:block;
+				clear:both;
+			}
+			.w1200{
+				width:1200px;
+				margin:0 auto;
+			}
+			.nav{
+				position:relative;
+				line-height:40px;
+				box-shadow:0 0 8px #ccc;
+			}
+			.nav .nav-l li{
+				float:left;
+				padding:0 15px;
+			}
+			.nav .nav-l li a:hover{
+				color:#ff33ff;
+			}
+			.nav .nav-l .home{
+				background-color:#333;
+				color:white !important;
+			}
+
+			.nav .subNav{
+				position:absolute;
+				left:0;
+				top:100%;
+				width:100%;
+				border:solid #ddd;
+				border-width:1px 0;
+				background-color:#fff;
+				font-size:14px;
+				display:none;
+			}
+			.nav .subNav a{
+				padding:0 15px;
+			}
+			.nav .nav-l li:hover .subNav{
+				display:block;
+			}
+			.hot{
+				margin-top:20px;
+			}
+			.hot li{
+				float:left;
+				width:286px;
+				height:230px;
+				margin-right:14px;
+				overflow:hidden;
+			}
+			.hot li img{
+				width:100%;
+				height:auto;
+			}
+			.hot li:last-child{margin-left:0;}
+
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="w1200">
+				<ul class="nav-l clearFix">
+					<li class="home">首页</li>
+					<li>
+						<a href="#">暴漫</a>
+						<div class="subNav">
+							<div class="w1200">
+								<a href="#">短片</a>
+								<a href="#">连载</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">有料</a>
+						<div class="subNav">
+							<div class="w1200">
+								<a href="#">HOT图</a>
+								<a href="#">GIF怪兽</a>
+								<a href="#">JPG杂烩</a>
+								<a href="#">文字</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">小片er</a>
+						<div class="subNav">
+							<div class="w1200">
+								<a href="#">短视屏</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<ul class="hot w1200 clearFix">
+			<li><img src="bm-01.jpg" alt="" /></li>
+			<li><img src="bm-02.jpg" alt="" /></li>
+			<li><img src="bm-03.jpg" alt="" /></li>
+			<li><img src="bm-04.jpg" alt="" /></li>
+		</ul>
+	</body>
+	<!--
+		----------- 教质中心服务电话：4001567315 ------------
+	-->
+</html>

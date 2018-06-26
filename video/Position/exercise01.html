@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>work 1</title>
+        <style>
+            .total{
+                margin:0 auto;
+                width:1100px;
+                height:750px;
+                border:3px solid black;
+            }
+            .icon{
+                border-bottom: 1px solid rgba(128, 128, 128, 0.486);
+                width:100%;
+                height:80px;
+                position: relative;
+            }
+            .icon div:first-child{
+                width:375px;
+                height:85px;
+                position: absolute;
+                right:0;
+                left:0;
+                top:40px;
+                margin:0 auto;
+                background-image:url("images-01/1.jpg");
+                background-position: 0 -522px;
+            }
+            .cent{
+                width:85%;
+                margin:60px auto;
+                position: relative;
+            }
+            .cent img{
+                width:100%;
+                height:60%;
+            }
+            
+            .slide{
+                position:absolute;
+                width:50px;
+                height:60px;
+                background-image:url("images-01/2.png");
+                top:300px;
+            }
+            .left{
+                background-position: 0 -80px;  
+            }
+            .right{
+                left:94%;
+                background-position: 0 -155px;  
+            }
+            .shadow{
+                position: absolute;
+                background-color:rgba(46, 45, 45, 0.849);
+                height:150px;
+                width:90%;
+                top:85%;
+                left:5%;
+                color:rgba(255, 255, 255, 0.932);
+            }
+            .shadow p:first-child{
+                float:left;
+                width:35%;
+                font-size:22px;
+                margin: 35px 20px 0 25px;
+                line-height: 32px;
+            }
+            .shadow p:last-child{
+                float:left;
+                width:55%;
+                font-size:14px;
+                margin-top:30px; 
+                padding: 10px 0 10px 15px;
+                border-left:1px solid rgba(255, 255, 255, 0.932);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="total">
+            <div class="icon">
+                <div></div>
+            </div>
+            <div class="cent">
+                <img src="images-01/3.jpg" />
+                <div class="left slide"></div>
+                <div class="right slide"></div>
+                <div class="shadow">
+                    <p>5分钟就能搞定的时髦排队妆 秒杀大红唇和烟熏眼</p>
+                    <p>这次练习的是Position的使用，区别于float，完全脱离文档流，提高一个层次，定位要基于最近的父定位元素。依照代码的加载顺序依次显示定位元素，最后加载的在最上层，手动改变层级关系要使用z-index属性。</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
