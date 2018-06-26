@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>作业二</title>
+    <style>
+        body,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style: none;
+            color:rgba(41, 41, 41, 0.644); 
+            font-size:14px;
+            float:left;
+            font-weight: bold;
+            width:60px;
+            border-right:1px solid rgba(165, 164, 164, 0.582);
+            padding-left:30px;
+        }
+       
+        .total{
+            width:1300px;
+            height:600px;
+            border:2px solid rgba(165, 164, 164, 0.582);
+            margin:20px auto;
+            /* background-color:grey; */
+        }
+        ul{
+            width:70%;
+            margin:30px auto;
+            overflow: hidden;
+        } 
+        li:last-child{
+            border: none;
+        }
+        li:hover{
+            color:rgba(255, 60, 0, 0.884);
+        }
+        .picj{
+            overflow: hidden;
+        }
+        .pic1{
+            width:320px;
+           margin-left:20px;
+           padding-right:10px;
+        }
+        .pic{    
+             border-right:1px solid rgba(250, 217, 223, 0.829);
+             height:500px;
+             float:left;
+        }
+        .pic2 {
+            width:250px; 
+              
+        }
+        .pic2 img{
+            padding:0 10px 0 10px;
+        }
+        .pic2 img:first-child{
+            border-bottom:1px solid rgba(250, 217, 223, 0.829);
+        }
+        .pic3{
+            width:250px;
+        }
+        .pic3 img{
+            padding:0 20px 0 20px;
+        }
+        .pic3 img:first-child, .pic3 img:nth-child(2){
+            border-bottom:1px solid rgba(250, 217, 223, 0.829);
+        }
+        .pic4{
+            border-bottom:1px solid rgba(250, 217, 223, 0.829);
+            height:180px;
+        }
+        .pic4 img:first-child{
+            border-right:1px solid rgba(250, 217, 223, 0.829); 
+        }
+        .picj div:last-child{
+            border: none;
+        }
+        .picj::after{
+            content:'';
+            display:block;
+            width:0;
+            height:0;
+            overflow: hidden;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="total">
+        <ul>
+            <li>浮动</li>
+            <li>脱离</li>
+            <li>文档</li>
+            <li>无法</li>
+            <li>支撑</li>
+            <li>父级</li>
+            <li>宽度</li>
+            <li>尾部</li>
+            <li>清除</li>
+            <li>浮动</li>
+        </ul>
+        <div class="picj">
+            <div class="pic1 pic">
+                <img src="demo2/1.jpg" alt="XXX" title="护肤品">
+            </div>
+            <div class="pic2 pic">
+                <img src="demo2/2.jpg" alt="XXX" title="护肤品">
+                <img src="demo2/3.jpg" alt="XXX" title="洗发水">
+            </div>
+            <div class="pic3 pic">
+                <img src="demo2/4.jpg" alt="XXX" title="护肤品">
+                <img src="demo2/5.jpg" alt="XXX" title="洗发水">
+                <img src="demo2/6.jpg" alt="XXX" title="洗发水">
+            </div>
+            <div class=" pic">
+                <div class="pic4">
+                    <img src="demo2/7.jpg" alt="XXX" title="洗发水">
+                    <img src="demo2/8.jpg" alt="XXX" title="洗发水">  
+                </div>
+                <div>
+                    <img src="demo2/9.jpg" alt="XXX" title="洗发水">  
+                </div>
+            </div>
+    </div>
+    </div>
+    
+</body>
+</html>

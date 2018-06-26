@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <title>作业一</title>
+    <style>
+        body,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style: none;
+            color:inherit;
+           
+        }
+        .back{
+            width:1000px;
+            height:70px;
+            background-image: url("demo1/topbg.jpg");
+            overflow: hidden;
+        }
+        .icon{
+            float:left;
+            width:130px;
+            height:40px;
+            padding:10px 0 0 30px;
+        }
+        ul{
+            overflow: hidden;
+            padding-left:10px;
+        }
+        li{
+             float:left;
+             width: 50px;
+             color:rgba(255, 255, 255, 0.863);
+             margin-top:18px;
+             padding:5px 27px 10px 25px;
+             text-align: center;
+            
+             font-size:14px;
+        }
+        li:hover{
+             background-image: url("demo1/btn2.png");
+             background-repeat: no-repeat;
+        }
+        .back::after{
+            content:'';
+            display: block;
+            width:0;
+            height:0;
+            clear: both;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <img class="icon" src="demo1/weixin.png"></img>
+        <ul>
+            <li>首页</li>
+            <li>帮助</li>
+            <li>公众</li>
+            <li>微信</li>
+            <li>支付</li>
+            <li>网页版</li>
+            <li>表情</li>
+            <li>广告</li>
+        </ul>
+    </div>
+</body>
+</html>
