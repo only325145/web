@@ -16,7 +16,7 @@
             width:1000px;
             height:70px;
             background-image: url("demo1/topbg.jpg");
-            overflow: hidden;
+            /* overflow: hidden; */
         }
         .icon{
             float:left;
@@ -30,31 +30,29 @@
         }
         li{
              float:left;
-             width: 50px;
+             width: 50px; 
              color:rgba(255, 255, 255, 0.863);
-             margin-top:18px;
+             margin-top:18px; 
              padding:5px 27px 10px 25px;
              text-align: center;
-            
              font-size:14px;
         }
         li:hover{
              background-image: url("demo1/btn2.png");
              background-repeat: no-repeat;
         }
-        .back::after{
+        .clearf::after{
             content:'';
             display: block;
             width:0;
             height:0;
             clear: both;
-            overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <div class="back">
-        <img class="icon" src="demo1/weixin.png"></img>
+    <div class="back clearf">
+        <img class="icon" src="demo1/weixin.png" />
         <ul>
             <li>首页</li>
             <li>帮助</li>
