@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>exercise 01</title>
+        <style>
+            body,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd{
+                margin:0;
+                padding:0;
+            }
+            
+            .total{
+                width:100%;
+                height:40px;
+                box-shadow: 0 0 3px 2px rgba(128, 128, 128, 0.247);
+                position:relative; 
+            }
+            a{
+                text-decoration: none;
+                color:inherit;
+            }
+            li{
+                list-style: none;
+                color:inherit;
+                float:left;
+                padding:10px 15px;
+            }
+            .first{
+                height:100%;
+                width:1200px;
+                margin:0 auto;
+            }
+            .fir{
+                background-color: rgb(56, 55, 55);
+                color:white;
+            }
+            .sec li{
+                padding:10px 15px;
+                color:black;
+                font-size:14px;
+            }
+            .sec ul{
+                height:100%;
+                width:1200px;
+                margin:0 auto;
+                display: none;
+            }
+            .pic{
+                margin:20px auto;
+                width:1200px;   
+            }
+            .pic img{
+                width:280px;
+                height:230px;
+            }
+            .total .fbox{
+                position: absolute;
+                top:40px;
+                left:0;
+                height:40px;
+                width:100%;
+                border:1px solid rgba(128, 128, 128, 0.404);
+                background-color: white;
+                display: none;
+            }
+             .sec:hover,.sec li:hover{
+                 color:hotpink;
+             }
+             .sec:hover .fbox,.sec:hover ul{
+                 display: block;
+             }  
+             .clearf::after{
+                 content:'';
+                 clear: both;
+                 display: block;
+             }
+        </style>
+    </head>
+    <body>
+        <div class="total">
+            <ul class="first clearf">
+                <li class="fir">继续  </li>
+                <li class="sec"><a href="#" target="_self">进行</a> 
+                    <div class="fbox">
+                        <ul>
+                            <li><a href="#" target="_self">短片</a></li>
+                            <li><a href="#" target="_self">连载</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sec"><a href="#" target="_self">定位</a>
+                    <div class="fbox">
+                        <ul>
+                            <li><a href="#" target="_self">将定位</a></li>
+                            <li><a href="#" target="_self">用于</a></li>
+                            <li><a href="#" target="_self">列表</a></li>
+                            <li><a href="#" target="_self">灵活运用</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sec"><a href="#" target="_self">练习</a>
+                    <div class="fbox">
+                        <ul>
+                            <li><a href="#" target="_self">值得</a></li>
+                            <li><a href="#" target="_self">思考</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul> 
+            
+            <div class="pic">
+                <img src="images-02/bm-01.jpg"/>
+                <img src="images-02/bm-02.jpg"/>
+                <img src="images-02/bm-03.jpg"/>
+                <img src="images-02/bm-04.jpg"/>
+            </div>
+        </div>
+    </body>
+</html>
