@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>exercise2</title>
+        <base target="_blank" />
+        <style>
+            body,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd{
+                margin:0;
+                padding:0;
+            }
+            li{
+                list-style: none;
+            }
+            img{
+                vertical-align: top;
+            }
+            a{
+                text-decoration: none;
+                color:inherit;
+            }
+            body{
+                font:14px/24px "Microsoft yahei";
+            }
+            .navli{
+                float:left;
+                margin-left:30px
+            }
+            .clearf::after{
+                content:'';
+                display: block;
+                clear: both;
+            }
+            .fir{
+                width:300px;
+                margin:5px auto;
+            }
+            .bg{
+                width:100%;
+                height:500px;
+                background-color:rgb(207, 207, 207); 
+            }
+            .navli{
+                position: relative;
+            }
+            .navli ul{
+                position: absolute;
+                margin-left:-40px;
+                background-color: white;
+                padding:10px 10px;
+                opacity: 0;
+            }
+            .navli ul li{
+                margin-top:10px;
+            }
+            .sec{
+                width:100px;
+            }
+            .img{
+                background-image: url("demo2/navbar.png");
+                background-repeat:no-repeat;
+                width:25px;
+                height:20px;
+                float:left;
+            }
+            .navli span{
+                float:left;
+            }
+            .navli .a{
+                background-position: -3px -150px;
+            }
+            .navli .b{
+                background-position: 0 -180px;
+            }
+            .navli .c{
+                background-position: 0 -238px;
+            }
+            .navli .d{
+                background-position: -4px -298px;
+            }
+            .navli:hover{
+                cursor: pointer;
+            }
+            .navli:hover ul{
+                opacity: 1;
+                transition: opacity 2s;   
+            }
+            .navli ul:hover{
+                z-index: 1;
+                opacity: 1;
+                cursor:url("por/min1.cur"),pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <ul class="fir clearf">
+                <li class="navli">登录
+                    <ul>
+                        <li><div class="sec clearf"><div class="a img"></div><span>QQ登录</span></div></li>
+                        <li><div class="sec clearf"><div class="b img"></div><span>微博登录</span></div></li>
+                        <li><div class="sec clearf"><div class="c img"></div><span>微信登录</span></div></li>
+                        <li><div class="sec clearf"><div class="d img"></div><span>手机登录</span></div></li>
+                    </ul>
+                </li>
+                <li class="navli">注册
+                    <ul>
+                        <li><div class="sec clearf">渐变效果</div></li>
+                        <li><div class="sec clearf">采用</div></li>
+                        <li><div class="sec clearf">opacity</div></li>
+                        <li><div class="sec clearf">从0过渡到1</div></li>
+                    </ul>
+                </li>
+                <li class="navli">学院
+                    <ul>
+                        <li><div class="sec clearf">布局需要</div></li>
+                        <li><div class="sec clearf">考虑很多</div></li>
+                        <li><div class="sec clearf">后面再改布局</div></li>
+                        <li><div class="sec clearf">很麻烦</div></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="bg"></div>
+    </body>
+</html>
