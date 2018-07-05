@@ -1,0 +1,134 @@
+@charset "utf-8";
+body,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd{
+    margin:0;
+    padding:0;
+}
+body{
+    font:12px/24px "Microsoft yahei";
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.img{
+    vertical-align: top;
+}
+.clearf::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.whole{
+    width:100%;
+    height:1000px;
+}
+.navw{
+    width:20%;
+    height:100%;
+    float: left;
+}
+.icon{
+    width:6%;
+    background-color: rgb(30, 34, 43);
+    height:100%;
+    position: absolute;
+    left:0;
+}
+.icon img{
+   position: fixed;
+}
+.icon1{
+    top:30px;
+    left:20px;
+}
+.icon2{
+    top:120px;
+    left:20px;
+}
+.icon3{
+    top:210px;
+    left:20px;
+}
+.icon4{
+    top:300px;
+    left:20px;
+}
+.icon5{
+    bottom: 30px;
+    left:20px;
+}
+.icon6{
+    bottom: 30px;
+    left:60px;
+}
+.navfont{
+    width:266.41px;
+    height:100%;
+    position: absolute;
+    margin-left: 6%;
+    background-color:rgb(46, 52, 68);
+    color:rgba(222, 235, 248, 0.897);
+}
+.navfont dl{
+    width:80%;
+    margin:20px auto;
+    border-bottom: 1px solid rgba(155, 155, 155, 0.13);
+}
+.navfont dl:last-child{
+    border:none;
+}
+.navfont dd{
+    margin-bottom:10px;
+}
+.navfont img{
+    float:right;
+    vertical-align:top;
+}
+.navfont dl dt{
+    margin-bottom:15px;
+    color:rgba(186, 206, 238, 0.37);
+}
+.navfont dd a:hover{
+    color:rgba(246, 247, 248, 0.993);
+    font-weight: bold;
+}
+.content{
+    background-color:white;
+    position: absolute;
+    width:80%;
+    margin-left: 20%;
+    float: left;
+}
+.title{
+    width:100%;
+    font-size:20px;
+    color:rgba(51, 51, 51, 0.897);
+    line-height: 5;
+    border-bottom: 1px solid rgba(187, 187, 187, 0.555);
+}
+.tit {
+    margin-left:3%;
+}
+.photo{
+    position:fixed;
+    top:10px;
+    right:5px;
+}
+.content .photo .s{
+    margin:0 0 20px 50px;
+}
+.content .photo .f{
+    display: inline-block;
+    line-height: 2;
+}
+/* .section{
+    width:100%;
+    height:100%;
+} */
+.left{
+    width:500px;
+    border-right:1px solid rgba(187, 187, 187, 0.555);
+}
