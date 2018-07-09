@@ -33,7 +33,7 @@
             }
             .fir{
                 width:300px;
-                margin:5px auto;
+                margin:5px auto 0;
             }
             .bg{
                 width:100%;
@@ -46,15 +46,26 @@
             .navli ul{
                 position: absolute;
                 margin-left:-40px;
-                background-color: white;
-                padding:10px 10px;
+                padding-top:10px;
                 opacity: 0;
             }
             .navli ul li{
-                margin-top:10px;
+                padding:5px 10px;
+                background-color: white;
+            }
+            .navli ul .lastli{
+                position:absolute;
+                top:-10px;
+                left:40px;
+                padding:0;
+                background-color:transparent;
+            }
+            .navli ul li .sjx{
+                border:10px solid transparent;
+                border-bottom-color: white; 
             }
             .sec{
-                width:100px;
+                width:90px;
             }
             .img{
                 background-image: url("demo2/navbar.png");
@@ -101,6 +112,7 @@
                         <li><div class="sec clearf"><div class="b img"></div><span>微博登录</span></div></li>
                         <li><div class="sec clearf"><div class="c img"></div><span>微信登录</span></div></li>
                         <li><div class="sec clearf"><div class="d img"></div><span>手机登录</span></div></li>
+                        <li class="lastli"><div class="sjx"></div></li>
                     </ul>
                 </li>
                 <li class="navli">注册
@@ -109,6 +121,7 @@
                         <li><div class="sec clearf">采用</div></li>
                         <li><div class="sec clearf">opacity</div></li>
                         <li><div class="sec clearf">从0过渡到1</div></li>
+                        <li class="lastli"><div class="sjx"></div></li>
                     </ul>
                 </li>
                 <li class="navli">学院
@@ -117,6 +130,7 @@
                         <li><div class="sec clearf">考虑很多</div></li>
                         <li><div class="sec clearf">后面再改布局</div></li>
                         <li><div class="sec clearf">很麻烦</div></li>
+                        <li class="lastli"><div class="sjx"></div></li>
                     </ul>
                 </li>
             </ul>
