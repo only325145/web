@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>the first exercise of JS</title>
+</head>
+<body>        
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        
+        var caladd=document.getElementById("add-btn");
+        var calminus=document.getElementById("minus-btn");
+        var caltimes=document.getElementById("times-btn");
+        var caldivide=document.getElementById("divide-btn");
+
+        caladd.onclick=function(){
+            var first=parseFloat(document.getElementById("first-number").value);
+             var second=parseFloat(document.getElementById("second-number").value);
+                document.getElementById("result").innerHTML=first+second; 
+             } 
+        calminus.onclick=function(){
+            var first=parseFloat(document.getElementById("first-number").value);
+            var second=parseFloat(document.getElementById("second-number").value);
+                document.getElementById("result").innerHTML=first-second; 
+            }
+        caltimes.onclick=function(){
+            var first=parseFloat(document.getElementById("first-number").value);
+            var second=parseFloat(document.getElementById("second-number").value);
+                document.getElementById("result").innerHTML=first*second;
+            }
+        caldivide.onclick=function(){
+            var first=parseFloat(document.getElementById("first-number").value);
+            var second=parseFloat(document.getElementById("second-number").value);
+                document.getElementById("result").innerHTML=first/second;
+            }
+
+    </script>
+</body>
+</html>
