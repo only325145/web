@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>the fourth exercise of JS</title>
+    <style>
+        td{
+            padding:0 5px;
+        }
+    </style>
+</head>
+<body>        
+    <p id="result">九九乘法表</p>
+    <script>
+    document.write("<table>");
+        for(var m=1;m<=9;m++)
+        {
+            document.write("<tr>");
+            for(var n=1;n<=m;n++)
+            {document.write("<td>"+n+"*"+m+"="+ n*m+"</td>");}
+            document.write("</tr>");
+            //if(n=m)
+        }
+        document.write("</table>");       
+    </script>
+</body>
+</html>
