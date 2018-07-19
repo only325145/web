@@ -1,0 +1,43 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd{
+    margin:0;
+    padding:0;
+}
+body{
+    font:12px/22px "Microsoft yahei";
+    color:#999;
+}
+li{list-style: none;display: block;text-align: inherit;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.fl{
+    float: left;
+}
+
+.fchild > *{/*.fChild下所有的子集元素*/
+    float:left;
+}
+.fr{
+    float: right;
+}
+.fclear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.w1190{
+    width:1190px;
+    margin:0 auto;
+}
+.bcp{
+    background-color: pink;
+}
+.bcb{
+    background-color: blue;
+}
+.bor{
+    border:1px solid black;
+}

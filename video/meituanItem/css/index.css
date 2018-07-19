@@ -1,0 +1,113 @@
+@charset "utf-8";
+#header{
+    line-height: 40px;
+    background-color: rgb(245, 245, 245);
+}
+/*导航栏左侧定位start*/
+#header .location-left .location-now{
+    margin:0 4px;
+    padding:0 2px;
+    border:1px solid #ddd;
+}
+#header .header-location .location-left a{
+    margin:0 4px;  
+}
+#header .header-location .location-right{
+    margin-left:24px;
+}
+#header .header-location .location-right a{
+    margin-left:8px;
+}
+#header a:hover ,#header .hNav .detail dt ,#header .location-right .login{
+    color:#31BBAC;
+}
+/*end*/
+
+/*导航栏右侧start*/
+#header .hNav li{
+    position: relative;
+    width:50px;
+    padding:0 14px;
+}
+#header .hNav li:hover{   
+    box-shadow:0 0 3px #888;/*手机app点击没有阴影框的效果*/
+}
+#header .hNav .app:hover{
+    box-shadow:none;
+}
+#header .hNav .detail{ /*二级菜单设置*/
+    position: absolute;
+    right:-1px;
+    top:100%;  /*?????作用*/
+    border:1px solid #ddd;
+    display:none;
+}
+#header .hNav li:hover .detail{
+    display: block;   /*为什么这次鼠标移动到li的子集detail区域不会导致detail显示出来*/
+}
+#header .hNav a{
+    text-align: center;/*让a标签里的文字能居中显示*/
+}
+#header .hNav .mine{
+    width:100%;
+}
+#header .hNav .mine a{
+    float: left;    /*如果不设置float，设置宽度没有作用，a标签的内容会平铺整个宽度，不会是一个a标签占一行*/
+    width:100%;
+    line-height:30px;
+}
+#header .hNav .center{
+    width:100px;
+}
+#header .hNav .center a{
+    float: left;
+    width:100%;
+    line-height:30px;
+}
+
+#header .hNav .web{
+    width:1190px;
+    padding-bottom: 20px;
+}
+#header .hNav li:hover::after{
+    content:'';
+    display: block;
+    background-color: white;
+    position: absolute;
+    right:0;
+    height:4px;
+    width:100%;
+    z-index: 10;
+}
+#header .hNav .detail .detail-hotal{
+    width:230px;
+}
+#header .hNav .detail dl{
+    float: left; /*浮动元素宽度可以由内容撑开，可以不设置*/
+    margin-left:50px;
+    text-align: center;
+}
+#header .hNav .detail dt{
+    line-height: 80px;/* 高度可以用行高撑开，可以不用padding*/
+    font-size: 14px;
+}
+#header .hNav .detail dd a{
+    float: left;
+    line-height:26px;
+}
+#header .hNav .detail .detail-hotal a{
+    width:33%;
+}
+#header .hNav .detail .detail-food{
+    width:200px;
+}
+#header .hNav .detail .detail-food a{
+    width:50%;
+}
+#header .hNav .detail .detail-movie{
+    width:150px;
+}
+#header .hNav .detail .detail-movie a{
+    width:100%;
+}
+/*导航栏右侧end*/
