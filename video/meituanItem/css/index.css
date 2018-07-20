@@ -18,7 +18,12 @@
 #header .header-location .location-right a{
     margin-left:8px;
 }
-#header a:hover ,#header .hNav .detail dt ,#header .location-right .login{
+#header a:hover ,
+#header .hNav .detail dt ,
+#header .location-right .login,
+#footer a:hover,
+#footer .footer-link .footer-phone .phoneword
+{
     color:#31BBAC;
 }
 /*end*/
@@ -35,11 +40,12 @@
 #header .hNav .app:hover{
     box-shadow:none;
 }
-#header .hNav .detail{ /*二级菜单设置*/
+#header .hNav .detail{ /*二级菜单设置,元素默认背景是透明的*/    
     position: absolute;
     right:-1px;
     top:100%;  /*?????作用*/
     border:1px solid #ddd;
+    background-color:white;
     display:none;
 }
 #header .hNav li:hover .detail{
@@ -111,3 +117,35 @@
     width:100%;
 }
 /*导航栏右侧end*/
+
+/*footer start*/
+
+#footer .footer-link{
+    line-height: 2;/*行高自适应字体大小，由字体大小决定，后面设置了dt的字体大小是14px所以dt的行高是28px，dd没有特意设置字体大小，所以依旧是继承body的12px，所以dd行高为24px
+                     如果此处设置为2em，表示行高固定为#footer .footer-link元素字体大小的两倍，及继承body的字体大小12px，不会跟随dt,dd设置的字体大小改变*/
+    border-bottom: 1px solid #ddd;
+    padding:30px 0 50px 0;
+    }
+#footer .footer-link dt{
+    color:#555;
+    font-size: 14px;
+}
+#footer .footer-link dl{ 
+    width:190px;
+}
+#footer .eachpart{
+    padding-left:40px;
+}
+#footer .footer-link dl dl{
+    padding-top:20px;
+}
+#footer .footer-link .footer-phone{
+    padding:90px 0;
+}
+#footer .footer-link .footer-phone .phoneword{
+    font-size: 16px;
+}
+#footer .footer-link .footer-phone .phonenumber{
+    font-size: 20px;
+}
+/*footer end*/
