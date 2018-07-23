@@ -1,5 +1,6 @@
 @charset "utf-8";
 #header{
+    font-size:12px;
     line-height: 40px;
     background-color: rgb(245, 245, 245);
 }
@@ -21,6 +22,7 @@
 #header a:hover ,
 #header .hNav .detail dt ,
 #header .location-right .login,
+#search .intro a:hover,
 #footer a:hover,
 #footer .footer-link .footer-phone .phoneword
 {
@@ -31,7 +33,7 @@
 /*导航栏右侧start*/
 #header .hNav li{
     position: relative;
-    width:50px;
+    /* width:50px;  li元素浮动了的，让宽度自适应，不然字体变大，而宽度不够，布局会乱掉*/  
     padding:0 14px;
 }
 #header .hNav li:hover{   
@@ -47,6 +49,9 @@
     border:1px solid #ddd;
     background-color:white;
     display:none;
+}
+#header .hNav li:hover{
+    background-color:white;
 }
 #header .hNav li:hover .detail{
     display: block;   /*为什么这次鼠标移动到li的子集detail区域不会导致detail显示出来*/
@@ -116,14 +121,76 @@
 #header .hNav .detail .detail-movie a{
     width:100%;
 }
+#header .hNav .detail .detail-phone img{
+    width:60px;
+    height:60px;
+}
+#header .hNav .detail .detail-phone a{
+    margin-right:20px;
+}
 /*导航栏右侧end*/
+
+/*search start*/
+#search h1 img{
+    width:130px;
+    height:auto;
+}
+#search{
+    padding-top:30px;
+    font-size:12px;
+}
+#search .searchbox{
+    margin-left:150px;
+}
+#search .searchbox .searchinput{
+    border:1px solid #13D1BE;
+    border-radius: 4px;
+}
+#search .searchbox .text{
+    width:460px;
+    height:20px;
+    border:none;
+    outline:none;/*去掉选中input元素时默认的蓝色框*/
+    padding:10px;
+    
+    /* 给input采用padding扩充大小，不直接设置高度，这样可以避免父集边框圆角时而input框依然是直角*/
+                 /*搜索框里文字与边框的距离，不用text-index，因为如果输入的文字内容超过文本框长度，缩进的距离将会消失*/
+}
+#search .searchbox .btn{
+    width:80px;
+    height:40px;
+    border:none;
+    background-color: #13D1BE;
+    color:white;
+    outline:none;
+}
+#search .searchbox .btn:hover{
+    cursor: pointer;
+}
+#search .searchbox .btn:active{
+    background-color: rgba(19, 209, 190, 0.644);
+    
+}
+#search .searchbox .intro a{
+    margin-left:10px;
+    line-height: 30px;
+}
+#search .searchsafe a{
+    margin-right:18px;
+}
+#search .searchsafe .safeicon{
+    font-size:20px;
+    color:#13D1BE;
+    text-align: center;
+}
+/*search end*/
 
 /*footer start*/
 
 #footer .footer-link{
     line-height: 2;/*行高自适应字体大小，由字体大小决定，后面设置了dt的字体大小是14px所以dt的行高是28px，dd没有特意设置字体大小，所以依旧是继承body的12px，所以dd行高为24px
                      如果此处设置为2em，表示行高固定为#footer .footer-link元素字体大小的两倍，及继承body的字体大小12px，不会跟随dt,dd设置的字体大小改变*/
-    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     padding:30px 0 50px 0;
     }
 #footer .footer-link dt{

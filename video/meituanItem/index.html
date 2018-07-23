@@ -5,20 +5,21 @@
         <title>work 1</title>
         <link rel="stylesheet" type="text/css" href="css/public.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" /><!--页面的css文件放在公共样式的后面，这样样式的优先级将会更高，防止有的样式无法实现-->
+        <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_750011_npx5hgo98ml.css" />
     </head>
     <body>
         <!--header start-->
         <div >
             <!--定位-->
-            <div id="header" class="w1190 fclear">
+            <div id="header" class="iconfont w1190 fclear">
                 <div class="header-location fl">
                     <div class="location-left fl">
-                        <span><b>长沙</b></span><a  class="location-now" href="#">切换城市</a>[<span><a href="#">株洲</a><a href="#">宁乡</a><a href="#">湘潭</a></span>]
+                        <span class="icon-dingwei"><b>长沙</b></span><a  class="location-now" href="#">切换城市</a>[<span><a href="#">株洲</a><a href="#">宁乡</a><a href="#">湘潭</a></span>]
                     </div>
                     <div class="location-right fl">
                         <a class="login" href="#">立即登录</a><a href="#">注册</a>
                     </div>
-                </div> 
+                </div>
             <!--导航-->
             <ul class="hNav fr fchild">
                 <li><a href="#">我的美团</a>
@@ -50,7 +51,7 @@
                         </dl>
                         <dl class="detail-phone">
                             <dt>手机应用</dt>
-                            <dd class="fclear"><a href="#"><img src="" alt="" title="" />热门电影</a><a href="#">热门影院</a><a href="#">热辣电影口碑榜</a><a href="#">国内票房榜</a><a href="#">经济型酒店</a></dd>
+                            <dd class="fclear"><a href="#"><img src="images/meituan.png" alt="" title="美团app" /></a><a href="#"><img src="images/waimai.png" alt="" title="外卖app" /></a><a href="#"><img src="images/zhenguo.png" alt="" title="榛果app" /></a><a href="#"><img src="images/dianping.png" alt="" title="大众点评app" /></a><a href="#"><img src="images/maoyan.png" alt="" title="猫眼app" /></a></dd>
                         </dl>
                     </div>
                 </li>
@@ -58,6 +59,30 @@
             </div>
         </div>
         <!--header end-->
+
+        <!--search start-->
+        <div id="search" class="iconfont w1190 fchild fclear">
+            <!--logo-->
+            <h1><a href=""><img src="images/logo.png" alt="" title=""/></a></h1>
+            <!--搜索框-->
+            <div class="searchbox">
+                <div class="searchinput fchild fclear">
+                   <input type="text" class="text" placeholder="搜索商家或地点"/>
+                   <div>
+                       <button class="iconfont icon-sousuo5 btn"></button> <!--按钮默认文字内容居中-->
+                   </div>   <!--单标签不能使用伪类-->
+                </div> 
+                <div class="intro"><a href="#">自主烧烤</a><a href="#">胖哥倆儿</a><a href="#">宫保鸡丁</a><a href="#">乡村基铁板烧</a></div>
+            </div>
+            <!--保障服务-->
+            <div class="searchsafe fchild fclear fr">
+                <a href="#"><p class="safeicon icon-tuihuobaozhang"></p><p>随时退</p></a><a href="#"><p class="safeicon icon-tucenggouxuan"></p><p>不满意免单</p></a><a href="#"><p class="safeicon icon-icon5"></p><p>过期退</p></a>
+            </div>
+        </div>
+        <!--search end-->
+        
+        <!--banner star-->
+        <!--banner end-->
 
         <!--footer start-->
         <div id="footer">
