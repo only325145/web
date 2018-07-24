@@ -157,7 +157,9 @@
 }
 #search .searchbox .searchinput{
     border:1px solid #13D1BE;
-    border-radius: 4px;
+    border-radius: 6px;
+    overflow: hidden;  /*因为父级边框有圆角，但子集内容依旧显示出来了，给父级采用此属性来解决
+                         图片实现四周圆角的效果也是这种方法达到*/
 }
 #search .searchbox .text{
     width:460px;
@@ -166,7 +168,7 @@
     outline:none;/*去掉选中input元素时默认的蓝色框*/
     padding:10px;
     
-    /* 给input采用padding扩充大小，不直接设置高度，这样可以避免父集边框圆角时而input框依然是直角*/
+    /* 给input采用padding扩充大小，不直接设置高度*/
                  /*搜索框里文字与边框的距离，不用text-index，因为如果输入的文字内容超过文本框长度，缩进的距离将会消失*/
 }
 #search .searchbox .btn{
@@ -203,7 +205,11 @@
 #conttotal .content-banner .introduce{   
     width:230px;
     height:475px;
-    background-color:rgba(2,181,157,.85);
+    background: rgba(2,181,157,.85);
+    background: -webkit-linear-gradient(-90deg,rgba(2,181,157,.85) 2%,rgba(22,146,183,.85) 100%);
+    background: -o-linear-gradient(-90deg,rgba(2,181,157,.85) 2%,rgba(22,146,183,.85) 100%);
+    background: -moz-linear-gradient(-90deg,rgba(2,181,157,.85) 2%,rgba(22,146,183,.85) 100%);
+    background: linear-gradient(to -90deg,rgba(2,181,157,.85) 2%,rgba(22,146,183,.85) 100%);
     margin-top:-50px;
     color:white;
 }
@@ -217,9 +223,11 @@
 }
 #conttotal .content-banner .introduce .classify{
     font-size:14px;
+    position: relative;
+    padding-top:10px;
+    z-index: 40;
 }
 #conttotal .content-banner .introduce .classify li{
-    position: relative;
     padding:2px 12px;
 }
 #conttotal .content-banner .introduce .classify li i{
@@ -236,13 +244,43 @@
 }
 #conttotal .content-banner .introduce .classify li:hover i{
     opacity: 1;
-}        /*menu end*/
+}    
+#conttotal .content-banner .introduce .classify .submenu{
+    position: absolute;
+	top:10px;
+	left: 100%;
+	z-index: 80;
+	width: 340px;
+	height: 416px;
+	padding: 0 30px;
+	background-color: #fff;
+	color:#999;
+    font-size: 12px;
+    display: none;
+}
+#conttotal .content-banner .classify .submenu .sub-title{
+    padding-top: 10px;
+	border-bottom:1px solid #aaa;
+    line-height: 44px;
+   
+}
+#conttotal .content-banner .classify .submenu .sub-title span{
+    font-size:16px;
+    color:black;
+}
+#conttotal .content-banner .classify .submenu .sub-cont a{
+    margin-right:15px;
+}
+#conttotal .content-banner .introduce .classify li:hover .submenu{
+    display: block;
+}
+    /*menu end*/
 
 /*picture banner start*/
 #conttotal .content-banner .right-banner{
     position: relative;
-    margin:10px 0 0 10px;
-    width:950px;
+    margin:10px 0 0 0;
+    width:960px;
 }
 #conttotal .content-banner .right-banner .right-title{
     position: absolute;
@@ -271,7 +309,8 @@
     height:240px;
 }
 
-#conttotal  .right-banner .picpart{
+#conttotal  .right-banner .intropic1>*,
+#conttotal  .right-banner .intropic2>*{
     margin-left: 10px;
 }
 #conttotal  .right-banner .picpart2 img{
@@ -280,8 +319,17 @@
 }
 #conttotal  .right-banner .picpart3{
     border:1px solid #ddd;
+    box-sizing: border-box;
     background-color: white;
-    padding:38px 60px 0 60px;
+    width:225px;
+    height:240px;
+    font-size: 14px;
+    color:black;
+}
+#conttotal  .right-banner .intropic2 .picpart5 > *,
+#conttotal  .right-banner .intropic1 .picpart3 > *{
+    margin:0 auto;
+    line-height:26px;
 }
 #conttotal  .right-banner .picpart3 .circal{   
     width:50px;
@@ -290,52 +338,152 @@
     border-radius: 30px;
     background-image: url('../images/loginIcon.jpg');
     background-size:cover;
-    margin:0 auto;    
+    margin-top:30px;
 }
 #conttotal  .right-banner .picpart3 .loginwelcome{
     text-align:center;
     margin:5px 0;
+    overflow: hidden;
 }
-#conttotal  .right-banner .picpart3 .button{
-    width:100px;
-    height:35px;
+#conttotal  .right-banner .picpart3 .button a{
+    display: block;
+	width: 118px;
+	margin:0 auto 15px;
+	line-height: 40px;
+	border:1px solid #e5e5e5;
     border-radius: 20px;
-    outline:none;
-    background-color:white;
-    margin-bottom: 20px;
-    cursor: pointer;
+    text-align:center;
 }
-#conttotal  .right-banner .intropic{
+#conttotal  .right-banner .picpart3 .button a:hover{
+    background-color:#eee;
+}
+#conttotal  .right-banner .intropic2{
     margin-top:10px;
 }
-#conttotal  .right-banner .intropic img{
+#conttotal  .right-banner .intropic2 img{
     width:270px;
-}
-#conttotal  .right-banner .intropic .picpart4 img{
-    width:150px;
     height:165px;
 }
-#conttotal  .right-banner .intropic .picpart5{
+#conttotal  .right-banner .intropic2 .picpart4 img{
+    width:150px;
+}
+#conttotal  .right-banner .intropic2 .picpart5{
     border:1px solid #ddd;
     background-color: white;
-    padding:10px 60px 9px 60px;
+    width:225px;
+    height:165px;
+    box-sizing: border-box;
 }
-#conttotal  .right-banner .intropic .picpart5 img{
+#conttotal  .right-banner .intropic2 .picpart5 img{
     width:100px;
     height:100px;   
 }
-#conttotal  .right-banner .intropic .picpart5 .App{
+#conttotal  .right-banner .intropic2 .picpart5 .App{
     font-size:14px;
 }
-#conttotal  .right-banner .intropic .picpart5 span{
+#conttotal  .right-banner .intropic2 .picpart5 span{
     margin-right:5px;
     color:red;
 }
-#conttotal  .right-banner .intropic .picpart5 div{
+#conttotal  .right-banner .intropic2 .picpart5 div{
     width:100px;
     text-align:center;
 }
 /*picture banner start*/
+
+/*主体内容 start*/
+#conttotal .cont{
+    margin-top:20px;
+}
+#conttotal .cont .cont-title{
+    line-height: 44px;
+    color:white;
+    border-radius: 6px 6px 0 0 ;
+    background-color: rgb(190, 164, 116); 
+	background-image: linear-gradient(to right, rgb(194, 176, 142) 3%, rgb(190, 164, 116) 100%);
+}
+#conttotal .cont .cont-title h4{
+    font:18px/44px "MFShangHei-Regular";
+    margin:0 20px;
+}
+#conttotal .cont .cont-title ul li{ 
+    position: relative;
+    font-size:14px;
+    margin-right:10px;
+    cursor: pointer;  
+}
+#conttotal .cont .cont-title ul li:hover::after{
+    position: absolute;
+    content:"";
+    border:6px solid transparent;
+    border-bottom-color: white;
+    bottom: 0;
+    left:40%;
+}
+#conttotal .cont .cont-content{
+    border:1px solid #ddd;
+    border-top:none;
+}
+#conttotal .cont .cont-content ul{
+    padding:10px 0 0 10px;
+}
+#conttotal .cont .cont-content li{
+    height: 315px;
+}
+#conttotal .cont .cont-content li:hover .contback{
+    background-color:rgba(221, 221, 221, 0.35);
+    transition: background-color 0.3s;
+}
+#conttotal .cont .cont-content li .contback{
+    padding:10px 10px 0 10px;
+    background-color:white;
+    border-radius: 8px;
+}
+#conttotal .cont .cont-content li a > *{
+    margin-bottom:8px;
+    width:368px;
+}
+#conttotal .cont .cont-content li .cont-img{
+    border-radius:4px;
+    overflow: hidden;     /*此处为图片的容器，设置该属性能使得图片呈现出圆角效果*/
+    width:369px;
+    height:210px;
+}
+#conttotal .cont .cont-content li .cont-img img{
+    width:369px;
+    height:210px;
+}
+#conttotal .cont .cont-content .cont-item1{
+    color:black;
+    font-size:14px;
+}
+.cont .cont-content .cont-item2{
+    white-space: nowrap;     /*当文字内容超出宽度时显示为省略号，因为此处主容器为float属性，宽度由内容撑开，为了达到效果要给文字的容器添加宽度*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+}
+.cont .cont-content .cont-item2 p{
+    border:1px solid #ddd;
+    padding:0 4px;
+    margin-right:10px;
+}
+.cont .cont-content .cont-item3 .nowprice{
+    color:#BE9E4D;
+}
+.cont .cont-content .cont-item3 .nowprice span{
+    font-size:22px;
+}
+.cont .cont-content .cont-item3 .oldprice,
+.cont .cont-content .cont-item3 .place{
+   padding-top:3px;
+}
+.cont .cont-content .cont-item3 .oldprice{
+    text-decoration: line-through;
+    margin-left:8px;
+}
+/*主体内容 end*/
+
 /*content end*/
 
 /*footer start*/

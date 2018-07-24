@@ -13,7 +13,8 @@ body{
     font:12px/22px "Microsoft yahei";
     color:#999;
 }
-li{list-style: none;display: block;text-align: inherit;
+li{
+    list-style: none;display: block;text-align: inherit;
 }
 a{
     text-decoration: none;
