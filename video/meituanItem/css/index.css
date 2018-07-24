@@ -1,8 +1,14 @@
 @charset "utf-8";
+#headtotal{
+    background-color:white;
+    box-shadow: 0 2px 27px 0 rgba(0, 0, 0, 0.11);
+}
 #header{
-    font-size:12px;
     line-height: 40px;
     background-color: rgb(245, 245, 245);
+}
+#header .header-con{
+    font-size:12px;
 }
 /*导航栏左侧定位start*/
 #header .location-left .location-now{
@@ -78,7 +84,7 @@
 
 #header .hNav .web{
     width:1190px;
-    padding-bottom: 20px;
+    padding-bottom: 20px; 
 }
 #header .hNav li:hover::after{
     content:'';
@@ -86,9 +92,15 @@
     background-color: white;
     position: absolute;
     right:0;
-    height:4px;
+    margin-top:-4px;
+    height:10px;
     width:100%;
     z-index: 10;
+}
+#header .hNav .detail{
+    z-index: 5;
+    border-radius: 4px;
+    margin-top:-2px;    
 }
 #header .hNav .detail .detail-hotal{
     width:230px;
@@ -97,6 +109,7 @@
     float: left; /*浮动元素宽度可以由内容撑开，可以不设置*/
     margin-left:50px;
     text-align: center;
+   
 }
 #header .hNav .detail dt{
     line-height: 80px;/* 高度可以用行高撑开，可以不用padding*/
@@ -136,7 +149,7 @@
     height:auto;
 }
 #search{
-    padding-top:30px;
+    padding:30px 0 70px 0;
     font-size:12px;
 }
 #search .searchbox{
@@ -185,8 +198,147 @@
 }
 /*search end*/
 
-/*footer start*/
+/*content start——menu start*/
 
+#conttotal .content-banner .introduce{   
+    width:230px;
+    height:475px;
+    background-color:rgba(2,181,157,.85);
+    margin-top:-50px;
+    color:white;
+}
+#conttotal .content-banner .introduce-title{
+    box-sizing:border-box;
+    line-height:50px;
+    font-size:16px;
+}
+#conttotal .content-banner .introduce-title span{
+    padding-left:15px;
+}
+#conttotal .content-banner .introduce .classify{
+    font-size:14px;
+}
+#conttotal .content-banner .introduce .classify li{
+    position: relative;
+    padding:2px 12px;
+}
+#conttotal .content-banner .introduce .classify li i{
+    margin-right:8px;
+    opacity: 0.4;
+}
+#conttotal .content-banner .introduce .classify li:after{  /*学会使用伪类实现一些小的内容*/
+    content:"\003e";
+    float:right;
+    margin-right:5px;
+}
+#conttotal .content-banner .introduce .classify li:hover{
+    background-color:rgba(255, 255, 255, 0.308);
+}
+#conttotal .content-banner .introduce .classify li:hover i{
+    opacity: 1;
+}        /*menu end*/
+
+/*picture banner start*/
+#conttotal .content-banner .right-banner{
+    position: relative;
+    margin:10px 0 0 10px;
+    width:950px;
+}
+#conttotal .content-banner .right-banner .right-title{
+    position: absolute;
+    top:-45px;
+    left:20px;
+    font-size:16px;
+    color:black;
+}
+#conttotal .content-banner .right-banner .right-title a{
+    position: relative;
+    text-align: center;
+    margin:0 20px;
+    font-weight:bold;
+}
+#conttotal .content-banner .right-banner .switch-pic{
+    width:550px;
+    height:240px;
+    overflow: hidden;
+}
+#conttotal .content-banner .right-banner .switch-pic .imgbox{
+    width:1000%;
+    margin-left:-0px;
+}
+#conttotal .content-banner .right-banner .imgbox img{
+    width:550px;
+    height:240px;
+}
+
+#conttotal  .right-banner .picpart{
+    margin-left: 10px;
+}
+#conttotal  .right-banner .picpart2 img{
+    width:150px;
+    height:240px;
+}
+#conttotal  .right-banner .picpart3{
+    border:1px solid #ddd;
+    background-color: white;
+    padding:38px 60px 0 60px;
+}
+#conttotal  .right-banner .picpart3 .circal{   
+    width:50px;
+    height:50px;
+    border:4px solid #ddd;
+    border-radius: 30px;
+    background-image: url('../images/loginIcon.jpg');
+    background-size:cover;
+    margin:0 auto;    
+}
+#conttotal  .right-banner .picpart3 .loginwelcome{
+    text-align:center;
+    margin:5px 0;
+}
+#conttotal  .right-banner .picpart3 .button{
+    width:100px;
+    height:35px;
+    border-radius: 20px;
+    outline:none;
+    background-color:white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#conttotal  .right-banner .intropic{
+    margin-top:10px;
+}
+#conttotal  .right-banner .intropic img{
+    width:270px;
+}
+#conttotal  .right-banner .intropic .picpart4 img{
+    width:150px;
+    height:165px;
+}
+#conttotal  .right-banner .intropic .picpart5{
+    border:1px solid #ddd;
+    background-color: white;
+    padding:10px 60px 9px 60px;
+}
+#conttotal  .right-banner .intropic .picpart5 img{
+    width:100px;
+    height:100px;   
+}
+#conttotal  .right-banner .intropic .picpart5 .App{
+    font-size:14px;
+}
+#conttotal  .right-banner .intropic .picpart5 span{
+    margin-right:5px;
+    color:red;
+}
+#conttotal  .right-banner .intropic .picpart5 div{
+    width:100px;
+    text-align:center;
+}
+/*picture banner start*/
+/*content end*/
+
+/*footer start*/
 #footer .footer-link{
     line-height: 2;/*行高自适应字体大小，由字体大小决定，后面设置了dt的字体大小是14px所以dt的行高是28px，dd没有特意设置字体大小，所以依旧是继承body的12px，所以dd行高为24px
                      如果此处设置为2em，表示行高固定为#footer .footer-link元素字体大小的两倍，及继承body的字体大小12px，不会跟随dt,dd设置的字体大小改变*/
