@@ -51,7 +51,7 @@
 #header .hNav .detail{ /*二级菜单设置,元素默认背景是透明的*/    
     position: absolute;
     right:-1px;
-    top:100%;  /*?????作用*/
+    top:100%;  /*让二级菜单定位能一直在一级菜单的下边沿，即使一级菜单高度变化*/
     border:1px solid #ddd;
     background-color:white;
     display:none;
@@ -205,7 +205,7 @@
 #conttotal .content-banner .introduce{   
     width:230px;
     height:475px;
-    background: rgba(2,181,157,.85);
+    background-color: rgba(2,181,157,.85);
     background: -webkit-linear-gradient(-90deg,rgba(2,181,157,.85) 2%,rgba(22,146,183,.85) 100%);
     background: -o-linear-gradient(-90deg,rgba(2,181,157,.85) 2%,rgba(22,146,183,.85) 100%);
     background: -moz-linear-gradient(-90deg,rgba(2,181,157,.85) 2%,rgba(22,146,183,.85) 100%);
@@ -234,7 +234,7 @@
     margin-right:8px;
     opacity: 0.4;
 }
-#conttotal .content-banner .introduce .classify li:after{  /*学会使用伪类实现一些小的内容*/
+#conttotal .content-banner .introduce .classify li::after{  /*学会使用伪类实现一些小的内容*/
     content:"\003e";
     float:right;
     margin-right:5px;
@@ -296,13 +296,39 @@
     font-weight:bold;
 }
 #conttotal .content-banner .right-banner .switch-pic{
+    position: relative;
     width:550px;
     height:240px;
     overflow: hidden;
 }
+#conttotal .content-banner .right-banner .switch-pic:hover button{
+    opacity: 1;
+    transition: opacity 0.7s;
+}
+#conttotal .content-banner .right-banner .switch-pic button{
+    position: absolute;
+    top:45%;
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+    color:white;
+    font-size:20px;
+    border:none;
+    outline:none;
+    background-color:rgba(0, 0, 0, 0.507);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+#conttotal .content-banner .right-banner .switch-pic .right{
+    left:10px;
+}
+#conttotal .content-banner .right-banner .switch-pic .left{
+    right:10px;
+}
 #conttotal .content-banner .right-banner .switch-pic .imgbox{
     width:1000%;
-    margin-left:-0px;
+    margin-left:0;
+    transition: margin-left 0.7s;
 }
 #conttotal .content-banner .right-banner .imgbox img{
     width:550px;
@@ -392,15 +418,19 @@
 /*picture banner start*/
 
 /*主体内容 start*/
-#conttotal .cont{
-    margin-top:20px;
-}
 #conttotal .cont .cont-title{
+    margin-top:20px;
     line-height: 44px;
     color:white;
-    border-radius: 6px 6px 0 0 ;
+    border-radius: 6px 6px 0 0 ;   
+}
+#conttotal .cont .title1{
     background-color: rgb(190, 164, 116); 
-	background-image: linear-gradient(to right, rgb(194, 176, 142) 3%, rgb(190, 164, 116) 100%);
+    background-image: linear-gradient(to right, rgb(194, 176, 142) 3%, rgb(190, 164, 116) 100%);
+}
+#conttotal .cont .title2{
+    background-color: rgb(120, 213, 230); 
+    background-image: linear-gradient(to right, rgb(120, 213, 230) 3%, rgb(108, 210, 218) 100%);
 }
 #conttotal .cont .cont-title h4{
     font:18px/44px "MFShangHei-Regular";
@@ -418,7 +448,7 @@
     border:6px solid transparent;
     border-bottom-color: white;
     bottom: 0;
-    left:40%;
+    left:35%;
 }
 #conttotal .cont .cont-content{
     border:1px solid #ddd;
