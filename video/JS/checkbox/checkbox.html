@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd{
+                margin:0px;
+                padding:0px;
+            }
+            li{
+                list-style:none;
+            }
+            a{
+                text-decoration: none;
+                color:inherit;
+            }
+            img{
+                vertical-align: top;
+            }
+            #box{
+                width:600px;
+                height:200px;
+                margin:50px auto;
+            }
+            .list::after{
+                content:"";
+                clear:both;
+                display: block;
+                visibility: hidden;
+            }
+            #box .list dt{
+                border-bottom:2px dotted black;
+                padding-bottom: 10px;
+            }
+            #box .list dd{
+                float:left;
+                margin:10px 20px 0 0;
+            }
+            #box .list dd img{
+                cursor:pointer;
+            }
+            #box .list dd span{
+                margin-left:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <dl class="list">
+               <dt>你最喜欢的水果：</dt>
+               <dd><img src="images/ckbg1.jpg"/><span>苹果</span></dd>
+               <dd><img src="images/ckbg1.jpg"/><span>芒果</span></dd>
+               <dd><img src="images/ckbg1.jpg"/><span>西瓜</span></dd>
+               <dd><img src="images/ckbg1.jpg"/><span>草莓</span></dd>
+               <dd><img src="images/ckbg1.jpg"/><span>水蜜桃</span></dd>
+               <dd><img src="images/ckbg1.jpg"/><span>柿子</span></dd>
+            </dl>
+        </div>
+        <script>
+            var box=document.getElementById("box"),
+                pic=box.querySelectorAll("img"),
+                s=pic[0].src;
+            for(var i=0;i < pic.length;i++)
+            {
+                pic[i].onclick=function()
+                {
+                   // console.log(s);
+                    if(this.src==s)
+                    {
+                        this.src="images/ckbg2.jpg";
+                    } 
+                    else
+                    {
+                        this.src="images/ckbg1.jpg"
+                    }
+                }
+            };
+
+
+        </script>
+    </body>
+</html>
