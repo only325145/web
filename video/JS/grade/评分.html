@@ -58,7 +58,8 @@
             var box=document.getElementById("box"),
                 star=box.querySelectorAll("div"),
                 cont=box.querySelector("textarea"),
-                length=star.length;
+                length=star.length,
+                text=["提示：请认真给当前文章打分","很差","较差","还行","推荐","力荐"];/*不把内容写在代码里，如果要更改文字只需要修改此数组就行*/
             for(var i=0;i<length;i++)
             {
                 var check;
@@ -67,24 +68,27 @@
                 star[i].onmouseover=function(){
                     check="true";
                     var n=this.index;
+                    //将所有的星星颜色清空（1、使得点击后继续滑动时能正常显示。2、直接在星星上倒退滑动时能后面的星星颜色应该清空
+                                        //所以选择全部清空再重新上色）
                     for(var t=0;t<length;t++)
                     {
                         star[t].style.backgroundPosition="0 0";
                     }
+                    //对当前位置以及之前的星星加颜色
                     for(var j=0;j<=n;j++)
                     {
-                        star[j].style.backgroundPosition="0 -28px";
+                        star[j].style.backgroundPosition="0 -28px";/*采用赋classame的方式，方便更改*/
                     } 
-                    switch(n)
+                    cont.innerHTML=text[n+1];
+                    /* switch(n)
                     {
                         case 0:cont.innerHTML="很差";break;
                         case 1:cont.innerHTML="较差";break;
                         case 2:cont.innerHTML="还行";break;
                         case 3:cont.innerHTML="推荐";break;
                         case 4:cont.innerHTML="力荐";break;
-                    }                   
-                } 
-
+                    }      */              
+                }
                 star[i].onclick=function(){
                     check="false";
                     var n=this.index;
@@ -92,23 +96,23 @@
                     {
                         star[j].style.backgroundPosition="0 -28px";
                     } 
-                    switch(n)
+                    cont.innerHTML=text[n+1];
+                    /* switch(n)
                     {
                         case 0:cont.innerHTML="很差";break;
                         case 1:cont.innerHTML="较差";break;
                         case 2:cont.innerHTML="还行";break;
                         case 3:cont.innerHTML="推荐";break;
                         case 4:cont.innerHTML="力荐";break;
-                    }                   
+                    }    */                
                 } 
-
                 star[i].onmouseout=function(){ 
                     var n=this.index;
                     for(var j=0;j<=n;j++)
                     if(check=="true")
                     {
                         star[j].style.backgroundPosition="0 0";
-                        cont.innerHTML="提示：请认真给当前文章打分";
+                        cont.innerHTML=text[0];
                     }
                     else
                     {
@@ -116,6 +120,7 @@
                     }                   
                 } 
             };
+            
         </script>
     </body>
 </html>
