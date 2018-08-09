@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            #box{
+                width:500px;
+                height:200px;
+                border:1px solid #ddd;
+                margin:50px auto;
+                padding:10px;
+            }
+            #box input,button{
+                margin-right:5px;
+            }
+            .hilight{
+                color:red;
+                font-size:18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <input type="text" placeholder="请输入想查找的文字" id="input1"/><input type="text" placeholder="请输入替换的文字" id="input2"/><button>查找</button><button>替换</button>
+            <p></p>
+        </div>
+        <script>
+            var oinput1=document.getElementById("input1"),
+                oinput2=document.getElementById("input2"),
+                abutton=document.querySelectorAll("button"),
+                op=document.querySelector("p"),
+                
+                string="【行程推荐：】重庆是个好地方，冬天冷，夏天热；重庆是个好地方，美女多，脾气暴；重庆是个好地方，长江水，嘉陵江，相环绕；重庆是个好地方，中梁山，缙云山，空气好。【行程推荐：】重庆是个好地方，冬天冷，夏天热；重庆是个好地方，美女多，脾气暴；重庆是个好地方，长江水，嘉陵江，相环绕；重庆是个好地方，中梁山，缙云山，空气好。";
+                //len=text1.length;
+            op.innerHTML=string;
+            abutton[0].onclick=function(){
+                var text1=oinput1.value;
+                var arr=string.split(text1);
+                op.innerHTML=arr.join("<span class='hilight'>"+text1+"</span>");
+                /*此处直接将变化后的字符串赋给op.innerHTML,表示一次性的效果。不通过string，因为string是全局变量，后续的使用中(再次点击)应以最初的状态分割成数组。如果此处改变了string，hilight的文字将不会消失*/
+                
+                //方法二：
+                /* for(var i=1;i<arr.length;){
+                    arr.splice(i,0,"<span class='hilight'>"+text1+"</span>");
+                    i+=2;
+                    //console.log(arr.length);
+                };
+                op.innerHTML=arr.join(""); */
+            }
+            abutton[1].onclick=function(){
+                var text1=oinput1.value;
+                var text2=oinput2.value;
+                if(text2){ /*确认输入框中是否有内容*/
+                    var arr=string.split(text1); /*替换：将string中text1的文字换成text2的文字，对于替换功能而言就是将string以text1分隔开，再以text2拼接上。*/  
+                    op.innerHTML=arr.join("<span class='hilight'>"+text2+"</span>");
+                    string=arr.join(text2);/*因为是替换，所以string里的文字将发生改变，即后续也应该是变化后的文字*/
+                }
+                else{
+                    alert("请输入要替换的文字！");
+                };
+                
+
+                /*方法二： 
+                for(var i=1;i<arr.length;){
+                    arr.splice(i,0,"<span class='hilight'>"+text2+"</span>");
+                    i+=2;
+                };
+                op.innerHTML=arr.join(""); */
+            };
+        </script>
+    </body>
+</html>
